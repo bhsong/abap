@@ -160,19 +160,11 @@ CALL FUNCTION 'F4IF_INT_TABLE_VALUE_REQUEST'
 *----------------------------------------------------------------------*
 
 FORM CALL_BACK2 TABLES RECORD_TAB STRUCTURE SEAHLPRES
-
                CHANGING SHLP_TOP TYPE SHLP_DESCR
-
                      CALLCONTROL LIKE DDSHF4CTRL.
 
-
-
   SHLP_TOP-INTDESCR-DIALOGTYPE = 'A'.   "A 100개 이상이면 다이알로그 조회, D 즉시조회,  C 다이알로그 조회
-
-
-
 ENDFORM.                    "call_back
-
 
 ************************************************************************
 *Start-of-selection.
