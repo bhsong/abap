@@ -98,38 +98,22 @@ DATA: IT_RETURN_TAB TYPE ddshretval OCCURS 0 WITH HEADER LINE .
 
 
 CALL FUNCTION 'F4IF_INT_TABLE_VALUE_REQUEST'
-
     EXPORTING
-
       RETFIELD         = 'DISTANCE'
-
       VALUE_ORG        = 'S'
-
       DYNPROFIELD      = 's_dist-low'
-
       DYNPPROG         = SY-REPID
-
       DYNPNR           = SY-DYNNR
-
       CALLBACK_FORM    = 'CALL_BACK2'
-
       CALLBACK_PROGRAM = SY-REPID
-
     TABLES
-
       VALUE_TAB        = IT_F4HELP3
-
       RETURN_TAB       = IT_RETURN_TAB
-
     EXCEPTIONS
-
       PARAMETER_ERROR  = 1
-
       NO_VALUES_FOUND  = 2
-
       OTHERS           = 3.
 
-    NUM = 10.
 
 AT SELECTION-SCREEN ON VALUE-REQUEST FOR s_dist-high.
 
@@ -149,37 +133,21 @@ DATA: IT_RETURN_TAB TYPE ddshretval OCCURS 0 WITH HEADER LINE .
 
 
 CALL FUNCTION 'F4IF_INT_TABLE_VALUE_REQUEST'
-
     EXPORTING
-
       RETFIELD         = 'DISTANCE'
-
       VALUE_ORG        = 'S'
-
       DYNPROFIELD      = 's_dist-high'
-
       DYNPPROG         = SY-REPID
-
       DYNPNR           = SY-DYNNR
-
       CALLBACK_FORM    = 'CALL_BACK2'
-
       CALLBACK_PROGRAM = SY-REPID
-
     TABLES
-
       VALUE_TAB        = IT_F4HELP3
-
       RETURN_TAB       = IT_RETURN_TAB
-
     EXCEPTIONS
-
       PARAMETER_ERROR  = 1
-
       NO_VALUES_FOUND  = 2
-
       OTHERS           = 3.
-
 
 *&---------------------------------------------------------------------*
 *&      Form  call_back2
